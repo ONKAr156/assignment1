@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useRegisterMutation, useLoginMutation, useLoginWithGoogleMutation  } from '../redux/apis/authApi';
+import { useRegisterMutation, useLoginMutation, useLoginWithGoogleMutation } from '../redux/apis/authApi';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       await login(userData).unwrap();
       navigate('/');
@@ -55,42 +55,42 @@ const Login = () => {
   };
   return (
     <div className='min-h-screen p-10 flex justify-center items-center bg-slate-200'>
-      <form 
+      <form
         className='h-[20rem] bg-white p-2 flex flex-col justify-center items-center gap-4'
         onSubmit={handleSubmit}
       >
         <div className='flex flex-col gap-2'>
           <label htmlFor="email" className="form-label">Email</label>
-          <input 
-            type="email" 
-            className="form-control border p-2 rounded-md" 
-            id="email" 
-            value={userData.email} 
-            onChange={handleChange} 
-            placeholder="Enter Your Email" 
-            required 
+          <input
+            type="email"
+            className="form-control border p-2 rounded-md"
+            id="email"
+            value={userData.email}
+            onChange={handleChange}
+            placeholder="Enter Your Email"
+            required
           />
         </div>
         <div className='flex flex-col gap-2'>
           <label htmlFor="password" className="form-label">Password</label>
-          <input 
-            type="password" 
-            className="form-control border p-2 rounded-md" 
-            id="password" 
-            value={userData.password} 
-            onChange={handleChange} 
-            placeholder="Enter Your Password" 
-            required 
+          <input
+            type="password"
+            className="form-control border p-2 rounded-md"
+            id="password"
+            value={userData.password}
+            onChange={handleChange}
+            placeholder="Enter Your Password"
+            required
           />
         </div>
-        
+
         <button type='submit' className='bg-blue-500 px-4 py-2 rounded-lg text-slate-50'>
           Login
         </button>
 
-        <button 
+        <button
           type="button"
-          onClick={handleGoogleLogin} 
+          onClick={handleGoogleLogin}
           className='bg-blue-500 px-4 py-2 text-slate-50'
         >
           <i className='bi bi-google'></i> Continue With Google
