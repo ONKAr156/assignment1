@@ -63,7 +63,7 @@ const Login = () => {
           <label htmlFor="email" className="form-label">Email</label>
           <input 
             type="email" 
-            className="form-control" 
+            className="form-control border p-2 rounded-md" 
             id="email" 
             value={userData.email} 
             onChange={handleChange} 
@@ -75,7 +75,7 @@ const Login = () => {
           <label htmlFor="password" className="form-label">Password</label>
           <input 
             type="password" 
-            className="form-control" 
+            className="form-control border p-2 rounded-md" 
             id="password" 
             value={userData.password} 
             onChange={handleChange} 
@@ -84,7 +84,7 @@ const Login = () => {
           />
         </div>
         
-        <button type='submit' className='bg-blue-500 px-4 py-2 text-slate-50'>
+        <button type='submit' className='bg-blue-500 px-4 py-2 rounded-lg text-slate-50'>
           Login
         </button>
 
