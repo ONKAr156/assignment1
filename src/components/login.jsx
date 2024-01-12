@@ -28,7 +28,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Use login or register here based on your use case
+    
     try {
       await login(userData).unwrap();
       navigate('/');
